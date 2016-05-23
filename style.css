@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+﻿w@charset "utf-8";
 /* CSS Document */
 #map{
 	position:absolute;
@@ -6,20 +6,133 @@
 	margin-top:20px;
 	width:100%;
 }
+
 #leftmap{
 	position:absolute;
+	width:200px;
+	height:600px;
 	left:10%;
 	top:10%;
-	
 	border:2px solid #666;
+	background-image:url(lrmap.jpg);
+	background-size:cover;
 }
+
+.leftbox{
+	box-shadow:5px 5px 5px #333;
+}
+
+#showlevel{
+	text-align:center;
+	width:160px;
+	height:100px;
+	margin-top:50px;
+	margin-left:20px;
+	background-color:rgba(0,0,0,0.5);
+	font-family:"钟齐流江硬笔草体";
+	color:#FFF;
+	font-size:28px;
+	line-height:100px;
+}
+
+#second{
+	text-align:center;
+	width:160px;
+	height:100px;
+	margin-top:50px;
+	margin-left:20px;
+	background-color:rgba(0,0,0,0.5);
+	font-family:"钟齐流江硬笔草体";
+	color:#FFF;
+	font-size:28px;
+	line-height:100px;
+}
+
+#showproperty{
+	text-align:center;
+	width:160px;
+	height:200px;
+	margin-top:50px;
+	margin-left:20px;
+	padding-top:10px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#monsterproperty{
+	text-align:center;
+	width:160px;
+	height:50px;
+	margin-top:50px;
+	margin-left:20px;
+	padding-bottom:12px;
+	padding-top:10px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#showkey{
+	text-align:left;
+	width:160px;
+	height:100px;
+	margin-top:50px;
+	margin-left:20px;
+	background-color:rgba(0,0,0,0.5);
+}
+
+.key{
+	margin-top:7px;
+	margin-left:10px;
+}
+
+#keybg1{
+	position: absolute;
+	background-color: rgba(96,176,249,0.5);
+	top:469px;
+	left:65px;
+	width:90px;
+	height:30px;
+	font-family:"方正启体简体";
+	border-radius:10px;
+	text-align:center;
+	line-height:30px;
+}
+
+#keybg2{
+	position:absolute;
+	top:521px;
+	left:65px;
+	background-color: rgba(251,132,135,0.5);
+	width:90px;
+	height:30px;
+	font-family:"方正启体简体";
+	border-radius:10px;
+	text-align:center;
+	line-height:31px;
+}
+
+.prop{
+	text-align:left;
+	font-family:"方正启体简体";
+	background-color:rgba(255,255,255,0.5);
+	width:130px;
+	height:30px;
+	margin-top:12.5px;
+	margin-left:15px;
+	border:1px #CCC solid;
+	border-radius:10px;
+	line-height:30px;
+	left: 73px;
+	top: 538px;
+}	
 
 #rightmap{
 	position:absolute;
 	left:1000px;
 	top:10%;
-	
+	width:200px;
+	height:600px;
 	border:2px solid #666;
+	background-image:url(lrmap.jpg);
+	background-size:cover;
 }
 
 #mainmap{
