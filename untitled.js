@@ -1,4 +1,6 @@
 //********定义区******************
+
+
 level=1;
 monster={
 	x:[],
@@ -28,13 +30,15 @@ var drawmap=function(){
 	c=document.getElementById("mainmap");
     cxt = c.getContext("2d"); 
 	var i,j;
-    var floorpic=document.getElementById("floorpic");
+	var floorpic=document.getElementById("floorpic");
 	var wallpic=document.getElementById("wallpic");
 	var doorclose=document.getElementById("doorclose");
 	var dooropen=document.getElementById("dooropen");
 	var monster1pic=document.getElementById("monster1pic");
 	var key1pic=document.getElementById("key1");
 	var key2pic=document.getElementById("key2");
+	var flag=document.getElementById("flag");
+	var tomb=document.getElementById("tomb");
 	for(i=0;i<10;i++)
   		for(j=0;j<10;j++){
   			cxt.drawImage(floorpic,i*60,j*60,60,60);
@@ -49,6 +53,8 @@ var drawmap=function(){
 			if(map[i][j]==11)cxt.drawImage(monster1pic, j*60,i*60,60,60);
 			if(map[i][j]==8)cxt.drawImage(key1pic, j*60,i*60,60,60);
 			if(map[i][j]==9)cxt.drawImage(key2pic, j*60,i*60,60,60);
+			if(map[i][j]==10)cxt.drawImage(flag, j*60,i*60,60,60);
+			if(map[i][j]==13)cxt.drawImage(tomb, j*60,i*60,60,60);
 	}
 }
 $(document).keydown(function(event){ 
@@ -121,6 +127,33 @@ var operation=function(y,x)
 		map[hero.y][hero.x]=88;
 		time=setTimeout("opendoor()",80);
 		heromove();
+	}
+	else if(map[y][x]==11||map[y][x]==12)
+	{
+		var mhp;
+		if(map[y][x]==11)mph=20;
+		else if(map[y][x]==12)mph=25;
+		var attacks;
+		if(5+Math.floor(power*0.5)<=20)
+		{
+			attacks=Math.ceil(mph/(5+Math.floor(power*0.5)));
+			hp -= 5-Math.floor(protect*0.5)*attacks;
+		}
+		else
+			hp -= 20-Math.floor(protect*0.5);
+		if(hp<=0)
+		{
+			gameover();
+		}
+		else
+		{
+			py=y;
+			px=x;
+			map[y][x]=13;//dead monster
+			heromove();			
+			time=setTimeout("opendoor();heromove()",800);
+			
+		}
 	}
 }
 var goleft=function(){

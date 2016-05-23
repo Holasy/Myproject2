@@ -30,6 +30,8 @@ function changelevel(){
 		map[7][1]=map[5][2]=map[3][5]=8;
 		
 		map[8][8]=9;
+		
+		map[1][1]=10;
 	}
 	else if(level==2){}
 	else if(level==3){}
