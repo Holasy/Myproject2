@@ -74,24 +74,24 @@ function changekey(){
 }
 
 function changehp(){
-	document.getElementById("hp").innerHTML="生命值~~~~"+hp;
-	document.getElementById("hp2").innerHTML="生命值~~~~"+hp2;
-	document.getElementById("hp3").innerHTML="敌人生命值~~~"+hp3;
+	document.getElementById("hp").innerHTML="生命值~~~~ "+hp;
+	document.getElementById("hp2").innerHTML="生命值~~~~ "+hp2;
+	document.getElementById("hp3").innerHTML="敌人生命值~~~ "+hp3;
 }
 
 function changepower(){
-	document.getElementById("power").innerHTML="能力值~~~~"+power;
-	document.getElementById("power2").innerHTML="能力值~~~~"+power2;
+	document.getElementById("power").innerHTML="能力值~~~~ "+power;
+	document.getElementById("power2").innerHTML="能力值~~~~ "+power2;
 }
 
 function changeprotect(){
-	document.getElementById("protect").innerHTML="防御力~~~~"+protect;
-	document.getElementById("protect2").innerHTML="防御力~~~~"+protect2;
+	document.getElementById("protect").innerHTML="防御力~~~~ "+protect;
+	document.getElementById("protect2").innerHTML="防御力~~~~ "+protect2;
 }
 
 function changemoney(){
-	document.getElementById("money").innerHTML="财富值~~~~"+money;
-	document.getElementById("money2").innerHTML="财富值~~~~"+money2;
+	document.getElementById("money").innerHTML="财富值~~~~ "+money;
+	document.getElementById("money2").innerHTML="财富值~~~~ "+money2;
 }
 var pickkey=function()
 {
@@ -111,11 +111,11 @@ var operation=function(y,x)
 		heromove();
 	}
 	else if(map[y][x]==8||map[y][x]==9)
-		{
-			hero.x=x;
-			hero.y=y;
-			pickkey();
-		}	
+	{
+		hero.x=x;
+		hero.y=y;
+		pickkey();
+	}	
 	else if((map[y][x]==1&&key1num!=0)||(map[y][x]==2&&key2num!=0))
 	{
 		hero.x=x;
@@ -141,6 +141,8 @@ var operation=function(y,x)
 		}
 		else
 			hp -= 20-Math.floor(protect*0.5);
+			
+		changehp();	
 		if(hp<=0)
 		{
 			gameover();
@@ -152,8 +154,16 @@ var operation=function(y,x)
 			map[y][x]=13;//dead monster
 			heromove();			
 			time=setTimeout("opendoor();heromove()",800);
-			
 		}
+	}
+	else if(map[y][x]==10)
+	{
+		level++;
+		hero.x=x;
+		hero.y=y;
+		heromove();
+		document.getElementById("showlevel").innerHTML="第 "+level+" 关";
+		changelevel();
 	}
 }
 var goleft=function(){
@@ -182,33 +192,12 @@ var godown=function(){
 var heromove=function(){
 	cxt.clearRect(0,0,600,600);
 	drawmap();
-	var heropic=document.getElementById("heropic");
-	cxt.drawImage(heropic,hero.x*60,hero.y*60,60,60);
-	/*var heropic1=document.getElementById("heropic1");
+	var heropic1=document.getElementById("heropic1");
 	var heropic2=document.getElementById("heropic2");
+	var heropic3=document.getElementById("heropic3");
 	var heropic4=document.getElementById("heropic4");
 	if(turnstatus==1)cxt.drawImage(heropic1,hero.x*60,hero.y*60,60,60);
 	if(turnstatus==2)cxt.drawImage(heropic2,hero.x*60,hero.y*60,60,60);
 	if(turnstatus==3)cxt.drawImage(heropic3,hero.x*60,hero.y*60,60,60);
-	if(turnstatus==4)cxt.drawImage(heropic4,hero.x*60,hero.y*60,60,60);*/
-	//drawmonsters();
-	//drawitems();
+	if(turnstatus==4)cxt.drawImage(heropic4,hero.x*60,hero.y*60,60,60);
 } 
-var drawmonsters=function()
-{
-	var i,j;
-	var monsterpic=new Image();
-	monsterpic.src="monsterpic.png";
-  	for(i=0;i<10;i++)
-  		for(j=0;j<10;j++)
-  		{
-  			if(mmap[i*5+j]==7)cxt.drawImage(monsterpic, i*60,j*60,60,60);
-  		}
-
-}
-var drawitems=function()
-{
-	var i,j;
-	
-	
-}
