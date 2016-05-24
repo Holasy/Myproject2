@@ -1,6 +1,4 @@
 //********定义区******************
-
-
 level=1;
 monster={
 	x:[],
@@ -32,7 +30,8 @@ var drawmap=function(){
 	var i,j;
 	var floorpic=document.getElementById("floorpic");
 	var wallpic=document.getElementById("wallpic");
-	var doorclose=document.getElementById("doorclose");
+	var door1=document.getElementById("door1");
+	var door2=document.getElementById("door2");
 	var dooropen=document.getElementById("dooropen");
 	var monster1pic=document.getElementById("monster1pic");
 	var key1pic=document.getElementById("key1");
@@ -47,14 +46,15 @@ var drawmap=function(){
   	for(i=0;i<10;i++)
   		for(j=0;j<10;j++)
   		{
-  			if(map[i][j]==1)cxt.drawImage(doorclose, j*60,i*60,60,60);
-			if(map[i][j]==2)cxt.drawImage(dooropen, j*60,i*60,60,60);
+  			if(map[i][j]==1)cxt.drawImage(door1, j*60,i*60,60,60);
+			if(map[i][j]==2)cxt.drawImage(door2, j*60,i*60,60,60);
 			if(map[i][j]==3)cxt.drawImage(wallpic, j*60,i*60,60,60);
 			if(map[i][j]==11)cxt.drawImage(monster1pic, j*60,i*60,60,60);
 			if(map[i][j]==8)cxt.drawImage(key1pic, j*60,i*60,60,60);
 			if(map[i][j]==9)cxt.drawImage(key2pic, j*60,i*60,60,60);
 			if(map[i][j]==10)cxt.drawImage(flag, j*60,i*60,60,60);
 			if(map[i][j]==13)cxt.drawImage(tomb, j*60,i*60,60,60);
+			if(map[i][j]==15)cxt.drawImage(dooropen, j*60,i*60,60,60);
 	}
 }
 $(document).keydown(function(event){ 
@@ -63,11 +63,7 @@ else if (event.keyCode == 39){event.preventDefault();	goright();}//右
 else if (event.keyCode == 38){event.preventDefault();	goup();}//上
 else if (event.keyCode == 40){event.preventDefault();	godown();}//下
 }); 
-function opendoor(){
-	map[py][px]=0;
-	changekey();
-	heromove();
-}
+
 function changekey(){
 	document.getElementById("keybg1").innerHTML=key1num;
 	document.getElementById("keybg2").innerHTML=key2num;
@@ -93,6 +89,7 @@ function changemoney(){
 	document.getElementById("money").innerHTML="财富值~~~~ "+money;
 	document.getElementById("money2").innerHTML="财富值~~~~ "+money2;
 }
+
 var pickkey=function()
 {
 	if(map[hero.y][hero.x]==8)key1num++;
@@ -100,6 +97,18 @@ var pickkey=function()
 	map[hero.y][hero.x]=0;
 	changekey();
 	heromove();
+}
+
+function opendoor(){
+	map[py][px]=0;
+	changekey();
+	heromove();
+}
+
+function gameover(){
+	
+
+
 }
 
 var operation=function(y,x)
@@ -118,15 +127,13 @@ var operation=function(y,x)
 	}	
 	else if((map[y][x]==1&&key1num!=0)||(map[y][x]==2&&key2num!=0))
 	{
-		hero.x=x;
-		hero.y=y;
-		if(map[hero.y][hero.x]==1)key1num--;
-		if(map[hero.y][hero.x]==2)key2num--;		
-		py=hero.y;
-		px=hero.x;
-		map[hero.y][hero.x]=88;
-		time=setTimeout("opendoor()",80);
+		if(map[y][x]==1)key1num--;
+		if(map[y][x]==2)key2num--;		
+		py=y;
+		px=x;
+		map[y][x]=15;
 		heromove();
+		time=setTimeout("opendoor()",100);
 	}
 	else if(map[y][x]==11||map[y][x]==12)
 	{
@@ -152,7 +159,7 @@ var operation=function(y,x)
 			py=y;
 			px=x;
 			map[y][x]=13;//dead monster
-			heromove();			
+			heromove();
 			time=setTimeout("opendoor();heromove()",800);
 		}
 	}
