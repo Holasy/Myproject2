@@ -178,10 +178,10 @@ var showbox=function(){
 }
 
 var levelnext=function(){
-	/*++level;
+	++level;
 	document.getElementById("showlevel").innerHTML="第 "+level+" 关";
 	document.getElementById("nextlevel").style.display = "none";
-	changelevel();*/alert("gggg");
+	changelevel();
 }
 
 var goleft=function(){

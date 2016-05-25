@@ -9,11 +9,7 @@
 		<title>这是一个游戏【正经脸】</title>
 	</head>
 <body>
-<script>
-function hhh(){
-	alert("hhh");
-}
-</script>
+
 <p><div id="head">Maybe a game?</div></p>
 
 <div id="map">
@@ -59,12 +55,12 @@ function hhh(){
 </div></p>
 </div>
 
-<div id="nextlevel">
+<div id="nextlevel" style="display:none">
 	<canvas id="levelup" width="400" height="300">
 		Your browser does not support the canvas element.
 	</canvas>
    
-    <input type="button" id="button1" class="anniu" value="下一关" onClick="levelnext"></div>
+    <input type="button" id="button1" class="anniu" value="下一关" onClick="levelnext()"></div>
 	<input type="button" class="anniu" value="存档">
 	<input type="button" class="anniu" value="退出">
 </div>
