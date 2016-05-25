@@ -9,15 +9,19 @@
 		<title>这是一个游戏【正经脸】</title>
 	</head>
 <body>
-
-
+<script>
+function hhh(){
+	alert("hhh");
+}
+</script>
 <p><div id="head">Maybe a game?</div></p>
 
 <div id="map">
 
 <p><div id="leftmap">
 
-<div id="showlevel" class="leftbox">第  1  关</div>
+<div id="showlevel" class="leftbox">第  1  关
+<input type="button" class="anniu" value="下一关" onClick="hhh()"></div>
 
 <div id="showproperty" class="leftbox">
 	<div id="hp" class="prop">生命值~~~~ 100</div>
@@ -56,9 +60,13 @@
 </div>
 
 <div id="nextlevel">
-	<canvas id="levelup" width="400" height="400">
+	<canvas id="levelup" width="400" height="300">
 		Your browser does not support the canvas element.
 	</canvas>
+   
+    <input type="button" id="button1" class="anniu" value="下一关" onClick="levelnext"></div>
+	<input type="button" class="anniu" value="存档">
+	<input type="button" class="anniu" value="退出">
 </div>
 
 <img src="floorpic.jpg" id="floorpic" style="display:none;"><!--0-->

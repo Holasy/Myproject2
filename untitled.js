@@ -160,7 +160,7 @@ var operation=function(y,x)
 			px=x;
 			map[y][x]=13;//dead monster
 			heromove();
-			time=setTimeout("opendoor();heromove()",800);
+			time=setTimeout("opendoor();heromove()",200);
 		}
 	}
 	else if(map[y][x]==10)
@@ -169,27 +169,41 @@ var operation=function(y,x)
 		hero.x=x;
 		hero.y=y;
 		heromove();
-		document.getElementById("showlevel").innerHTML="第 "+level+" 关";
-		changelevel();
+		showbox();
 	}
 }
+
+var showbox=function(){
+	document.getElementById("nextlevel").style.display = "block";
+}
+
+var levelnext=function(){
+	/*++level;
+	document.getElementById("showlevel").innerHTML="第 "+level+" 关";
+	document.getElementById("nextlevel").style.display = "none";
+	changelevel();*/alert("gggg");
+}
+
 var goleft=function(){
 	turnstatus=3;
 	heromove();
 	operation(hero.y,hero.x-1);
 	
 }
+
 var goright=function(){
 	turnstatus=4;
 	heromove();
 	operation(hero.y,hero.x+1);
 
 }
+
 var goup=function(){
 	turnstatus=2;
 	heromove();
 	operation(hero.y-1,hero.x);
 }
+
 var godown=function(){
 	turnstatus=1;
 	heromove();
