@@ -540,7 +540,7 @@ var godown=function(){
 	if(playtwo==1)
 	{	
 		turnstatus=1;
-	operation(hero.y+1,hero.x);
+		operation(hero.y+1,hero.x);
 	}
 	if(playtwo==2)
 	{
@@ -563,13 +563,13 @@ var heromove=function(){
 	if(twoplay==1)
 	{
 		var heropic21=document.getElementById("heropic21");
-	var heropic22=document.getElementById("heropic22");
-	var heropic23=document.getElementById("heropic23");
-	var heropic24=document.getElementById("heropic24");
-	if(twoturnstatus==1)cxt.drawImage(heropic21,herotwo.x*60,herotwo.y*60,60,60);
-	if(twoturnstatus==2)cxt.drawImage(heropic22,herotwo.x*60,herotwo.y*60,60,60);
-	if(twoturnstatus==3)cxt.drawImage(heropic23,herotwo.x*60,herotwo.y*60,60,60);
-	if(twoturnstatus==4)cxt.drawImage(heropic24,herotwo.x*60,herotwo.y*60,60,60);
+		var heropic22=document.getElementById("heropic22");
+		var heropic23=document.getElementById("heropic23");
+		var heropic24=document.getElementById("heropic24");
+		if(twoturnstatus==1)cxt.drawImage(heropic21,herotwo.x*60,herotwo.y*60,60,60);
+		if(twoturnstatus==2)cxt.drawImage(heropic22,herotwo.x*60,herotwo.y*60,60,60);
+		if(twoturnstatus==3)cxt.drawImage(heropic23,herotwo.x*60,herotwo.y*60,60,60);
+		if(twoturnstatus==4)cxt.drawImage(heropic24,herotwo.x*60,herotwo.y*60,60,60);
 	}
 } 
 $(document).ready(function () { 
