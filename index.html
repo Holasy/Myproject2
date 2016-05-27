@@ -10,14 +10,28 @@
 	</head>
 <body>
 
+
+<div id="nextlevel" style="display:none">
+	<canvas id="levelup">
+    	Your browser does not support the canvas element.
+    </canvas>
+	<p id="buttonp">
+	<input type="button" class="anniu" value="下一关" onClick="levelnext()">
+	<input type="button" class="anniu" value="存档">
+	<input type="button" class="anniu" value="退出">
+	</p>
+</div>
+<div id="pause">
+</div>
+
+
 <p><div id="head">Maybe a game?</div></p>
 
 <div id="map">
 
 <p><div id="leftmap">
 
-<div id="showlevel" class="leftbox">第  1  关
-<input type="button" class="anniu" value="下一关" onClick="hhh()"></div>
+<div id="showlevel" class="leftbox">第  1  关</div>
 
 <div id="showproperty" class="leftbox">
 	<div id="hp" class="prop">生命值~~~~ 100</div>
@@ -55,16 +69,6 @@
 </div></p>
 </div>
 
-<div id="nextlevel" style="display:none">
-	<canvas id="levelup" width="400" height="300">
-		Your browser does not support the canvas element.
-	</canvas>
-   
-    <input type="button" id="button1" class="anniu" value="下一关" onClick="levelnext()"></div>
-	<input type="button" class="anniu" value="存档">
-	<input type="button" class="anniu" value="退出">
-</div>
-
 <img src="floorpic.jpg" id="floorpic" style="display:none;"><!--0-->
 <img src="door1.jpg" id="door1" style="display:none;"> <!--1-->
 <img src="door2.jpg" id="door2" style="display:none;"> <!--2-->
@@ -74,6 +78,10 @@
 <img src="heropic2.png" id="heropic2" style="display:none;">
 <img src="heropic3.png" id="heropic3" style="display:none;">
 <img src="heropic4.png" id="heropic4" style="display:none;">
+<img src="heropic21.png" id="heropic21" style="display:none;">
+<img src="heropic22.png" id="heropic22" style="display:none;">
+<img src="heropic23.png" id="heropic23" style="display:none;">
+<img src="heropic24.png" id="heropic24" style="display:none;">
 <img src="monster1pic.png" id="monster1pic" style="display:none;">
 <img src="key1.png" id="key1" style="display:none;">
 <img src="key2.png" id="key2" style="display:none;">

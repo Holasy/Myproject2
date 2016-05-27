@@ -159,13 +159,26 @@
 	top:0;
 }
 
+input[type="button"] {
+    background: #999;
+	border-radius: 200px;
+    border: none;
+    padding: 5px 5px;
+    color: white;
+    font-size: 12px;
+	height:60px;
+	width:60px;
+	text-align:center;
+}
 #nextlevel{
 	position:absolute;
 	top:15%;
 	left:270px;	
 	width:800px;
 	height:450px;
-	background-color:#F00;
+	border:2px solid #0F0;
+	border-radius:20px;
+	z-index:5555; 
 }
 
 #levelup{
@@ -176,8 +189,9 @@
 	border-radius:20px;
 }
 
-#button1{
-	top:340px;
+#buttonp{
 	position:absolute;
-
+	top:70%;
+	left:270px;	
+	text-align:center;
 }
