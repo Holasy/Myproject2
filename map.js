@@ -36,7 +36,7 @@ function changelevel(){
 		map[7][1]=map[5][2]=map[3][5]=map[5][8]=8;//key1
 		map[1][8]=map[8][8]=9;//key2
 		
-		map[1][1]=10;
+		map[1][1]=map[7][2]=10;
 	}
 	else if(level==2)
 	{
