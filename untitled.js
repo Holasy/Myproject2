@@ -375,6 +375,7 @@ var levelnext=function()
 	level++;
 	document.getElementById("showlevel").innerHTML="第 "+level+" 关";
 	document.getElementById("nextlevel").style.display="none";
+	clearTimeout(time);
 	changelevel();
 	heromove();
 }
