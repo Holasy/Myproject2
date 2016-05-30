@@ -165,10 +165,12 @@ input[type="button"] {
     border: none;
     padding: 5px 5px;
     color: white;
-    font-size: 12px;
-	height:60px;
-	width:60px;
+    font-size: 20px;
+	height:70px;
+	width:70px;
 	text-align:center;
+	font-family:"方正启体简体";
+	line-height:60px;
 }
 #nextlevel{
 	position:absolute;
@@ -192,4 +194,67 @@ input[type="button"] {
 	top:70%;
 	left:270px;	
 	text-align:center;
+}
+#choice{
+	position:absolute;
+	top:15%;
+	left:270px;	
+	width:800px;
+	height:450px;
+	z-index:5555;
+	background-image:url(star.jpg);
+	background-size:cover;
+	border-radius:20px;
+}
+
+#p1{
+	position:absolute;
+	top:35%;
+	left:35px;
+	width:100px;
+	height:100px;
+	z-index:5555;
+}
+
+#p2{
+	position:absolute;
+	top:35%;
+	left:680px;	
+	width:100px;
+	height:100px;
+	z-index:5555;
+}
+
+#sure{
+	position:absolute;
+	top:85%;
+	left:350px;	
+	width:150px;
+	height:30px;
+	z-index:5555;
+	line-height:27px;
+}
+
+#ch1{
+	left:270px;
+	top:15%;
+	position:absolute;
+}
+
+#ch2{
+	left:270px;
+	top:15%;
+	position:absolute;
+}
+
+#ch3{
+	left:270px;
+	top:15%;
+	position:absolute;
+}
+
+#ch4{
+	left:270px;
+	top:15%;
+	position:absolute;
 }

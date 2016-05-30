@@ -10,10 +10,19 @@
 	</head>
 <body>
 
+<div id="choice" >
+	<img src="page1.png" id="p1" >
+    <img src="page2.png" id="p2" >
+	<img src="heropic1.png" id="ch1" >
+    <img src="heropic2.png" id="ch2" >
+    <img src="heropic3.png" id="ch3" >
+    <img src="heropic4.png" id="ch4" >
+    <input type="button" id="sure" class="anniu" value="确定" onClick="hidechoice()">
+</div>
 
 <div id="nextlevel" style="display:none">
     <canvas id="levelup" width="1600" height="600" style="width:800px;height:300px;">Your browser does not support the canvas element.</canvas>
-	<p id="buttonp">
+	<p id="buttonp" style="text-align:center">
 	<input type="button" class="anniu" value="下一关" onClick="levelnext()">
 	<input type="button" class="anniu" value="存档">
 	<input type="button" class="anniu" value="退出">
@@ -21,6 +30,7 @@
 </div>
 <div id="pause">
 </div>
+
 
 
 <p><div id="head">Maybe a game?</div></p>

@@ -260,7 +260,7 @@ var showbox=function(){
 	cxt1.strokeStyle="rgba(96,176,249,0.5)";
 	cxt1.linewidth=1;
 	cxt1.fillRect(10,160,460,400);
-	cxt1.fillRect(1000,340,300,200);
+	cxt1.fillRect(1000,340,500,200);
 	
 	cxt1.fillStyle="rgba(251,132,135,0.5)";//red
 	cxt1.strokeStyle="rgba(251,132,135,0.5)";
@@ -300,7 +300,7 @@ var up=function(){
 	cxt1.strokeStyle="rgba(96,176,249,0.5)";
 	cxt1.linewidth=1;
 	cxt1.fillRect(10,160,460,400);
-	cxt1.fillRect(1000,340,300,200);
+	cxt1.fillRect(1000,340,500,200);
 	
 	cxt1.fillStyle="rgba(251,132,135,0.5)";//red
 	cxt1.strokeStyle="rgba(251,132,135,0.5)";
@@ -340,7 +340,7 @@ var up2=function(){
 	cxt1.strokeStyle="rgba(96,176,249,0.5)";
 	cxt1.linewidth=1;
 	cxt1.fillRect(10,160,460,400);
-	cxt1.fillRect(1000,340,300,200);
+	cxt1.fillRect(1000,340,500,200);
 	
 	cxt1.fillStyle="rgba(251,132,135,0.5)";//red
 	cxt1.strokeStyle="rgba(251,132,135,0.5)";
@@ -459,3 +459,297 @@ $(document).ready(function () {
 	drawmap();
 	heromove();
 });
+
+
+$(document).ready(function(e) {
+	$("#ch1").animate({
+		left:'270px',
+		top:'20%',
+		opacity:'1',
+		height:'300',
+		width:'300'
+	});
+	$("#ch2").animate({
+		left:'520px',
+		top:'20%',
+		opacity:'0.5',
+		height:'150px',
+		width:'150px'
+	});
+	$("#ch3").animate({
+		left:'550',
+		opacity:'0',
+		height:'300px',
+		width:'300px'
+	});
+	$("#ch4").animate({
+		left:'550',
+		opacity:'0',
+		height:'300px',
+		width:'300px'
+	});
+});
+
+var cn=1;
+
+$(document).ready(function(){
+  $("#p1").click(function(){
+	--cn;
+	switch (cn)
+	{
+	  	case 1:
+    		$("#ch1").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			$("#ch2").animate({
+				left:'520px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch3").animate({
+				left:'600',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch4").animate({
+				left:'600',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			break;
+		case 2:
+			$("#ch1").animate({
+				left:'120px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch2").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			$("#ch3").animate({
+				left:'520px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch4").animate({
+				left:'600',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			break;
+		case 3:
+			$("#ch1").animate({
+				left:'0px',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch2").animate({
+				left:'120px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch3").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			$("#ch4").animate({
+				left:'520px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			break;
+		case 4:
+			$("#ch1").animate({
+				left:'0px',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch2").animate({
+				left:'0px',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch3").animate({
+				left:'120px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch4").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			break;
+	}
+  });
+  
+  $("#p2").click(function(){
+	++cn;
+	switch (cn)
+	{
+	  	case 1:
+    		$("#ch1").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			$("#ch2").animate({
+				left:'520px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch3").animate({
+				left:'600',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'1500px'
+			});
+			$("#ch4").animate({
+				left:'600',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			break;
+		case 2:
+			$("#ch1").animate({
+				left:'120px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch2").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			$("#ch3").animate({
+				left:'520px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch4").animate({
+				left:'600',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			break;
+		case 3:
+			$("#ch1").animate({
+				left:'0px',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch2").animate({
+				left:'120px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch3").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+
+				width:'300'
+			});
+			$("#ch4").animate({
+				left:'520px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			break;
+		case 4:
+			$("#ch1").animate({
+				left:'0px',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch2").animate({
+				left:'0px',
+				top:'20%',
+				opacity:'0',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch3").animate({
+				left:'120px',
+				top:'20%',
+				opacity:'0.5',
+				height:'150px',
+				width:'150px'
+			});
+			$("#ch4").animate({
+				left:'270px',
+				top:'20%',
+				opacity:'1',
+				height:'300',
+				width:'300'
+			});
+			break;
+	}
+  });
+});
+
+
+function hidechoice(){
+    document.getElementById("choice").style.display = "none";
+}
