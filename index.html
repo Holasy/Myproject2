@@ -10,14 +10,25 @@
 	</head>
 <body>
 
-<div id="choice" >
+<div id="choice" style="display:none">
+	<font style="position:relative;top:50px;left:220px;font-size:150px;font-family:'書體坊顏體㊣';color:#CCC">迷 踪</font>
+    <p><font style="position:relative;left:100px;font-size:150px;font-family:'書體坊顏體㊣';color:#CCC">角色选择</font></p>
+    <font style="position:relative;left:250px;font-size:80px;font-family:'書體坊顏體㊣';color:#CCC">进入游戏</font>
 	<img src="page1.png" id="p1" >
     <img src="page2.png" id="p2" >
-	<img src="heropic1.png" id="ch1" >
-    <img src="heropic2.png" id="ch2" >
-    <img src="heropic3.png" id="ch3" >
-    <img src="heropic4.png" id="ch4" >
+	<img src="heropic1.png" id="ch1" class="ch">
+    <img src="heropic2.png" id="ch2" class="ch">
+    <img src="heropic3.png" id="ch3" class="ch">
+    <img src="heropic4.png" id="ch4" class="ch">
     <input type="button" id="sure" class="anniu" value="确定" onClick="hidechoice()">
+</div>
+
+<div id="start">
+	<font style="position:relative;top:50px;left:220px;font-size:150px;font-family:'書體坊顏體㊣'">迷 踪</font>
+	<div id="startbox1" class="startbox">单人模式</div>
+    <div id="startbox2" class="startbox">双人模式</div>
+    <div id="startbox3" class="startbox">读取进度</div>
+    <div id="startbox4" class="startbox">游戏说明</div>
 </div>
 
 <div id="nextlevel" style="display:none">

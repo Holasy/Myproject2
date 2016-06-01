@@ -195,6 +195,7 @@ input[type="button"] {
 	left:270px;	
 	text-align:center;
 }
+
 #choice{
 	position:absolute;
 	top:15%;
@@ -202,7 +203,8 @@ input[type="button"] {
 	width:800px;
 	height:450px;
 	z-index:5555;
-	background-image:url(star.jpg);
+	/*background-image:url(15.jpg);*/
+	background-color:rgba(256,256,256,0.5);
 	background-size:cover;
 	border-radius:20px;
 }
@@ -235,26 +237,43 @@ input[type="button"] {
 	line-height:27px;
 }
 
-#ch1{
-	left:270px;
-	top:15%;
+.ch{
 	position:absolute;
 }
 
-#ch2{
-	left:270px;
-	top:15%;
+#start{
 	position:absolute;
+	top:15%;
+	left:270px;	
+	width:800px;
+	height:450px;
+	z-index:5555;
+	background-image:url(start.jpg);
+	background-size:cover;
+	border-radius:20px;
+}
+.startbox{
+	position:relative;
+	text-align:center;
+	width:120px;
+	height:40px;
+	left:340px;
+	line-height:40px;
+	font-size:30px;
+	font-family:"書體坊顏體㊣";
+}
+#startbox1{
+	top:85px;
 }
 
-#ch3{
-	left:270px;
-	top:15%;
-	position:absolute;
+#startbox2{
+	top:95px;
 }
 
-#ch4{
-	left:270px;
-	top:15%;
-	position:absolute;
+#startbox3{
+	top:105px;
+}
+
+#startbox4{
+	top:115px;
 }
