@@ -282,7 +282,7 @@ var showbox=function(){
 	cxt1.fillText('关',1250,300);
 	
 	
-	cxt1.font="bold 100px 書體坊顏體㊣";
+	cxt1.font="bold 100px KyoMadoka";
 	cxt1.textAlign = "center";
 	cxt1.textBaseline = "middle";
 	cxt1.fillStyle = "#993333";
@@ -322,7 +322,7 @@ var up=function(){
 	cxt1.fillText('关',1250,300);
 	
 	
-	cxt1.font="bold 100px 書體坊顏體㊣";
+	cxt1.font="bold 100px KyoMadoka";
 	cxt1.textAlign = "center";
 	cxt1.textBaseline = "middle";
 	cxt1.fillStyle = "#993333";
@@ -362,7 +362,7 @@ var up2=function(){
 	cxt1.fillText('关',1250,300);
 	
 	
-	cxt1.font="bold 100px 書體坊顏體㊣";
+	cxt1.font="bold 100px KyoMadoka";
 	cxt1.textAlign = "center";
 	cxt1.textBaseline = "middle";
 	cxt1.fillStyle = "#993333";
