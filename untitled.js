@@ -479,12 +479,14 @@ $(document).ready(function() {
 	});
 	$("#ch3").animate({
 		left:'550',
+		top:'20%',
 		opacity:'0',
 		height:'300px',
 		width:'300px'
 	});
 	$("#ch4").animate({
 		left:'550',
+		top:'20%',
 		opacity:'0',
 		height:'300px',
 		width:'300px'
@@ -762,4 +764,19 @@ $(document).ready(function(){
 	$("#startbox1").click(function(){
 		$("#start").fadeOut(1000,showchoice());
 	});
+	$("#startbox2").click(function(){
+		$("#start").fadeOut(1000,showchoice());
+		twoplay=1;
+	});
+	$("#startbox3").click(function(){
+		$("#start").fadeOut(1000);
+		//读取进度
+	});
+	$("#startbox4").click(function(){
+		$("#instruction").fadeIn(1000);
+	});
 });
+
+function re(){
+	document.getElementById("instruction").style.display = "none";
+}
