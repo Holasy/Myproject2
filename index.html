@@ -9,10 +9,20 @@
 		<title>这是一个游戏【正经脸】</title>
 	</head>
 <body>
-
+    <audio controls="controls" autoplay="autoplay" style="display:none">
+  		<source src="bgs.mp3" type="audio/mp3" />
+                    Your browser does not support the audio element.
+	</audio>	
+	<audio id="beep-three" controls preload="auto" style="display:none">
+		<source src="click1.wav" controls></source>
+			Your browser isn't invited for super fun time.
+	</audio>
+		
+    
+    
 <div id="choice" style="display:none">
 	<font style="position:relative;top:50px;left:220px;font-size:150px;font-family:'書體坊顏體㊣';color:#CCC">迷 踪</font>
-    <p><font style="position:relative;left:100px;font-size:150px;font-family:'書體坊顏體㊣';color:#CCC">角色选择</font></p>
+  <p><font style="position:relative;left:100px;font-size:150px;font-family:'書體坊顏體㊣';color:#CCC">角色选择</font></p>
     <font style="position:relative;left:250px;font-size:80px;font-family:'書體坊顏體㊣';color:#CCC">进入游戏</font>
 	<img src="page1.png" id="p1" >
     <img src="page2.png" id="p2" >
@@ -41,7 +51,11 @@
     <div id="startbox3" class="startbox">读取进度</div>
     <div id="startbox4" class="startbox">游戏说明</div>
 </div>
-
+<script>var beepThree = $("#beep-three")[0];
+		$(".startbox").mouseenter(function(){
+			beepThree.pause();
+			beepThree.play();
+		});</script>
 <div id="nextlevel" style="display:none">
     <canvas id="levelup" width="1600" height="600" style="width:800px;height:300px;">Your browser does not support the canvas element.</canvas>
 	<p id="buttonp" style="text-align:center">
