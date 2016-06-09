@@ -341,11 +341,11 @@ function changeitems(){
 }
 
 function gameover(){
-	//document.getElementById("gameover").style.display="block";
-	//alert("gameover");
-	//document.getElementById("start").style.display="block";
-	document.getElementById("canvasContainer").style.display="block";
-	document.getElementById("textInputSpan").style.display="block";
+	$("#canvasContainer").fadeIn(1500);
+	$("#textInputSpan").fadeIn(1500);
+	$("#canvasContainer").fadeOut(2000);
+	$("#textInputSpan").fadeOut(2000);
+	$("#start").fadeIn(1500);
 }
 var showbox=function(){
 	timeflag=1;
@@ -542,7 +542,15 @@ var heromove=function(){
 	if(twoturnstatus==2)cxt.drawImage(heropic22,herotwo.x*60,herotwo.y*60,60,60);
 	if(twoturnstatus==3)cxt.drawImage(heropic23,herotwo.x*60,herotwo.y*60,60,60);
 	if(twoturnstatus==4)cxt.drawImage(heropic24,herotwo.x*60,herotwo.y*60,60,60);}
-	}
+}
+
+$(document).ready(function () { 
+	$("#canvasContainer").fadeOut(100);
+	$("#textInputSpan").fadeOut(100);	
+	drawmap();
+	heromove();
+});
+
 $(document).ready(function() {
 	$("#ch1").animate({
 		left:'270px',

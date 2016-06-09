@@ -384,8 +384,8 @@ var htmlBounds;
 var bounds;
 var minimumStageWidth = 250;
 var minimumStageHeight = 250;
-var maxStageWidth = 3000;
-var maxStageHeight = 1500;
+var maxStageWidth = 2000;
+var maxStageHeight = 500;
 var resizeTimeoutId = -1;
 var stats;
 

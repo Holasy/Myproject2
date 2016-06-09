@@ -323,8 +323,8 @@ input[type="button"] {
 #textInputSpan{
   position: absolute;
   top:0;
-  height:5000px;
-  width:5000px;
+  height:300px;
+  width:500px;
   color: #FFFFFF;
   font-family:"幼圆";
 }
