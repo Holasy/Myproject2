@@ -1,10 +1,12 @@
 ﻿w@charset "utf-8";
 /* CSS Document */
 #map{
-	position:absolute;
-	margin-bottom:10px;
-	margin-top:20px;
-	width:100%;
+	position: absolute;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	width: 100%;
+	left: 498px;
+	top: 147px;
 }
 
 #leftmap{
@@ -247,10 +249,10 @@ input[type="button"] {
 
 #start{
 	position:absolute;
-	top:15%;
-	left:270px;	
-	width:800px;
-	height:450px;
+	top:0%;
+	left:70px;	
+	width:1200px;
+	height:800px;
 	z-index:5555;
 	background-image:url(start.jpg);
 	background-size:cover;
@@ -261,7 +263,7 @@ input[type="button"] {
 	text-align:center;
 	width:120px;
 	height:40px;
-	left:340px;
+	left:547px;
 	line-height:40px;
 	font-size:30px;
 	font-family:"書體坊顏體㊣";
@@ -307,4 +309,22 @@ input[type="button"] {
 	z-index:6666;
 	line-height:27px;
 	cursor:pointer;
+}
+
+#canvasContainer{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:6666;
+}
+
+#textInputSpan{
+  position: absolute;
+  top:0;
+  height:5000px;
+  width:5000px;
+  color: #FFFFFF;
+  font-family:"幼圆";
 }
