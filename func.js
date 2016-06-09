@@ -137,7 +137,8 @@ var drawmap=function(){
 	var wallpic=document.getElementById("wallpic");
 	var door1=document.getElementById("door1");
 	var door2=document.getElementById("door2");
-	var dooropen=document.getElementById("dooropen");
+	var dooropen1=document.getElementById("dooropen1");
+	var dooropen2=document.getElementById("dooropen2");
 	var monster1pic=document.getElementById("monster1pic");
 	var key1pic=document.getElementById("key1");
 	var key2pic=document.getElementById("key2");
@@ -162,7 +163,8 @@ var drawmap=function(){
 			if(map[i][j]==9)cxt.drawImage(key2pic, j*60,i*60,60,60);
 			if(map[i][j]==10)cxt.drawImage(flag, j*60,i*60,60,60);
 			if(map[i][j]==13)cxt.drawImage(tomb, j*60,i*60,60,60);
-			if(map[i][j]==15)cxt.drawImage(dooropen, j*60,i*60,60,60);
+			if(map[i][j]==14)cxt.drawImage(dooropen1, j*60,i*60,60,60);
+			if(map[i][j]==15)cxt.drawImage(dooropen2, j*60,i*60,60,60);
 			if(map[i][j]==19)cxt.drawImage(m1, j*60,i*60,60,60);
 			if(map[i][j]==20)cxt.drawImage(m2, j*60,i*60,60,60);
 			if(map[i][j]==16)cxt.drawImage(_hp, j*60,i*60,60,60);
@@ -209,9 +211,16 @@ var operation=function(y,x)
 			
 		}//p2
 	}//捡钥匙	
-	else if((map[y][x]==1&&key1num!=0)||(map[y][x]==2&&key2num!=0)){
-		if(map[y][x]==1)key1num--;
-		if(map[y][x]==2)key2num--;		
+	else if(map[y][x]==1&&key1num!=0){
+		key1num--;		
+		py=y;
+		px=x;
+		map[y][x]=14;
+		heromove();
+		time=setTimeout("opendoor()",100);
+	}//开门
+	else if(map[y][x]==2&&key2num!=0){
+		key2num--;		
 		py=y;
 		px=x;
 		map[y][x]=15;

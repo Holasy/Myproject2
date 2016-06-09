@@ -4,7 +4,7 @@ function changelevel(){
 	timeflag=0;
 	if(level==1)
 	{
-		maxtime=2;//30
+		maxtime=30;
 		for(i=0;i<10;++i)
 		{
 			map[i]=new Array();
